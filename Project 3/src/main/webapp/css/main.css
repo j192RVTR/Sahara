@@ -1,0 +1,42 @@
+* {
+  margin: 0px;
+}
+#navigation {
+  width: 100%;
+  min-height: 50px;
+  border-bottom: 1px solid black;
+}
+#navigation > * {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+#navigation #userbar {
+  float: right;
+  margin-right: 30px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+#navigation #searchbar {
+  float: right;
+  margin-right: 10px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+#navigation #navbar {
+  margin-left: 10px;
+  min-width: 50px;
+  text-align: center;
+  display: inline-block;
+}
+.scrollbar marquee,
+.scrollbar marquee img {
+  display: inline-block;
+}
+.scrollbar marquee > div {
+  height: 100px;
+  margin-right: 100px;
+  display: block;
+}
