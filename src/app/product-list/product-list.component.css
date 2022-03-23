@@ -1,0 +1,11 @@
+.disable_link{
+    pointer-events: none;
+    color: gray;
+}
+.slide {
+    transition: 1s;
+    left: 0;
+}
+.is-link{
+     cursor: pointer;
+}
