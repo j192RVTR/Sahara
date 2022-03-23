@@ -4,8 +4,8 @@ import { IndexComponent } from './pages/index/index.component';
 import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { path: 'index', component: IndexComponent },
-  { path: '', component: LoginComponent}
+  { path: '', component: IndexComponent },
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
