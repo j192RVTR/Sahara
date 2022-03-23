@@ -1,0 +1,179 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active" aria-current="page">Showing {{start+1}}-{{finish}} of {{products.length}} results
+      <span *ngIf="set_keyword!=''"> for {{set_keyword}}</span></li>
+  </ol>
+</nav>
+<hr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-3 mr-0">
+
+      <h4>
+        Keyword
+      </h4>
+      <input class="form-control" type="text" placeholder="Search all fields here..." [(ngModel)]="keyword">
+      <h4>
+        Author
+      </h4>
+      <input class="form-control" type="text" placeholder="Search author here..." [(ngModel)]="author">
+      <h4>
+        Title
+      </h4>
+      <input class="form-control" type="text" placeholder="Search title here..." [(ngModel)]="title">
+      <h4>
+        Description
+      </h4>
+      <input class="form-control" type="text" placeholder="Search description here..." [(ngModel)]="description">
+
+      <h4>Categories</h4>
+      <div class="container" *ngFor="let category of filters.categories">
+        <div class="form-check p-10">
+          <input class="form-check-input p-4" type="checkbox" id="{{category.name}}+Check" [(ngModel)]="category.value">
+          <label class="form-check-label" for="{{category.name}}+Check">
+            {{category.name | titlecase}}
+          </label>
+        </div>
+        <div class="container" [class.d-none]="!category.value" *ngFor="let subcategory of category.subcategories">
+          <div class="form-check p-10">
+            <input class="form-check-input p-4" type="checkbox" id="{{subcategory.name}}+Check"
+              [(ngModel)]="subcategory.value">
+            <label class="form-check-label" for="{{subcategory.name}}+Check">
+              {{subcategory.name | titlecase}}
+            </label>
+          </div>
+          <div class="container" [class.d-none]="!subcategory.value"
+            *ngFor="let subsubcategory of subcategory.subcategories">
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="{{subsubcategory.name}}+Check"
+                [(ngModel)]="subsubcategory.value">
+              <label class="form-check-label" for="{{subsubcategory.name}}+Check">
+                {{subsubcategory.name | titlecase}}
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="form-check p-10">
+            <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.books">
+            <label class="form-check-label" for="bookCheck">
+              Books
+            </label>
+          </div>
+          <div class="form-check p-10">
+            <input class="form-check-input p-4" type="checkbox" id="movieCheck" [(ngModel)]="categoryfilters.movies">
+            <label class="form-check-label" for="movieCheck">
+              Movies
+            </label>
+          </div>
+          <div class="form-check p-10">
+            <input class="form-check-input p-4" type="checkbox" id="musicCheck" [(ngModel)]="categoryfilters.music">
+            <label class="form-check-label" for="musicCheck">
+              Music
+            </label>
+          </div> -->
+      <!-- <div class="container" [class.d-none]="!categoryfilters.books">
+            <h4>Book Subcategories</h4>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.books">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.books">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.books">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+          </div>
+          <div class="container" [class.d-none]="!categoryfilters.movies">
+            <h4>Movie Subcategories</h4>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.movies">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.movies">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.movies">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+          </div>
+          <div class="container slide" [class.d-none]="!categoryfilters.music">
+            <h4>Music Subcategories</h4>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.music">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.music">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+            <div class="form-check p-10">
+              <input class="form-check-input p-4" type="checkbox" id="bookCheck" [(ngModel)]="categoryfilters.music">
+              <label class="form-check-label" for="bookCheck">
+                Books
+              </label>
+            </div>
+          </div>-->
+          <div class="text-center pt-2 px-5">
+            <button type="submit"  class="btn btn-warning w-100" (click)="search()">Search</button>
+          </div>
+      <!-- <h4>Movie Subcategories</h4>
+          <h4>Music Subcategories</h4> -->
+
+    </div>
+    <div class="col-sm-9">
+      <div class="row">
+        <div class="col-sm-3" *ngFor="let product of products.slice(start, finish);">
+          <div class="card bg-light border-light">
+            <div class="container px-5 pt-5">
+              <a href="#"><img src="{{product.imageUrl}}" class="card-img-top" alt="..."></a>
+            </div>
+            <div class="card-body">
+              <a href="#">
+                <h5 class="card-title text-muted">{{product.title}}</h5>
+              </a>
+              <p class="card-text p-0 m-0 ">{{product.creator}}</p>
+             <!-- <p class="card-text font-weight-bold">{{product.price / 100 | currency}}</p> -->
+              <a href="#" class="btn btn-primary">Add to Cart</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row mx-auto p-0">
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item"><a class="page-link" [class.disable_link]="start==0" [class.is-link]="start!=0" href="#"
+              (click)="advancePage(page-1)">Previous</a></li>
+          <li class="page-item" *ngFor="let index of makeArray()"><a class="page-link" [class.is-link]="page!=index"
+              [class.disable_link]="page==index" (click)="advancePage(index)">{{index}}</a></li>
+          <li class="page-item"><a class="page-link" [class.disable_link]="finish==products.length"
+              [class.is-link]="finish!=products.length" (click)="advancePage(page+1)">Next</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
