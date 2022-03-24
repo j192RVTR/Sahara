@@ -1,0 +1,83 @@
+<div class="cart-container">
+    <!-- <div class="col-lg-9"> -->
+    <h1 class="display-4">Shopping Cart</h1>
+    <table class="table">
+
+        <tr>
+            <!-- <td style="text-align:right">
+				<button class="w3-btn w3-ripple" ng-click="">&#9998; Print Cart</button>
+			</td> -->
+
+            <td style="text-align:right">
+                <!-- <button class="w3-btn w3-ripple" ng-click="">&#9998; Print Cart</button>&nbsp; -->
+                <button class="w3-btn w3-ripple" (click)="checkout()">&#9998; Proceed to Secure
+                    Checkout</button>
+            </td>
+        </tr>
+
+    </table>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="text-muted">Your cart</span>
+                  <span class="badge badge-secondary badge-pill">{{products.length}}</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-condensed" *ngFor="let product of products;">
+                        <div>
+                            <h6 class="my-0">{{product.title}}</h6>
+                            <small class="text-muted">{{product.creator}}</small>
+                          </div>
+                          <span class="text-muted">{{product.price | currency}}<span [class.d-none]="product.quantity==1">*{{product.quantity}}</span></span>
+                    </li>
+                  <li class="list-group-item d-flex justify-content-between">
+                    <span>Total (USD)</span>
+                    <strong>{{sum() | currency}}</strong>
+                  </li>
+                </ul>
+              </div>
+            <div class="col-md-8 order-md-1">
+                <h1 [class.d-none]="products.length!=0">Your Shopping Cart is Empty</h1>
+                <table class="table" [class.d-none]="products.length == 0">
+                    <thead>
+                        <tr>
+                            <th scope="col">Item</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Qty</th>
+                            <th scope="col">Creator</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Total</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let product of products; let indexOfElement = index">
+                            <td>{{product.title}}</td>
+                            <td><img src="{{product.imageUrl}}" style="max-height: 100px;" class="img-fluid img-thumbnail" alt="{{product.title}}"></td>
+                            <td><button type="button" class="btn btn-success mx-4" (click)="increment(indexOfElement, 1)">+</button>{{product.quantity}}<button type="button" class="btn btn-danger mx-4" (click)="increment(indexOfElement, -1)">-</button></td>
+                            <td>{{product.creator}}</td>
+                            <td>{{product.price}}</td>
+                            <td>{{product.price * product.quantity}}</td>
+                            <td><button type="button" class="btn btn-warning" (click)="delete(product)">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tbody>
+                        <tr>
+                            <!-- <td></td>
+			<td></td>
+			<td></td> -->
+                            <!-- <td style="text-align: right"> -->
+                            <td colspan="3">
+                                <button class="w3-btn w3-ripple" (click)="checkout()">&#9998; Proceed to Secure Checkout</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+</div>

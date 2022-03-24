@@ -5,6 +5,7 @@
   </ol>
 </nav>
 <hr>
+<p>{{addMsg}}</p>
 <div class="container">
   <div class="row">
     <div class="col-sm-3 mr-0">
@@ -155,8 +156,8 @@
                 <h5 class="card-title text-muted">{{product.title}}</h5>
               </a>
               <p class="card-text p-0 m-0 ">{{product.creator}}</p>
-             <!-- <p class="card-text font-weight-bold">{{product.price / 100 | currency}}</p> -->
-              <a href="#" class="btn btn-primary">Add to Cart</a>
+             <p class="card-text font-weight-bold">{{product.price | currency}}</p>
+             <button type="button" class="btn btn-primary" (click)="addToCart(product)">Add To Cart</button>
             </div>
           </div>
         </div>

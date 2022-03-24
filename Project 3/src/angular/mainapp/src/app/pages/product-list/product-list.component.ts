@@ -8,21 +8,21 @@ import { Component, OnInit } from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   products = [
-    { title: "1", imageUrl: "http://books.google.com/books/content?id=oui9DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api", creator: "Lee Kravetz", price: 1999 },
-    { title: "2", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781984882172_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Emma Stonex", price: 1999 },
-    { title: "3", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780593311295_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Kazuo Ishiguro", price: 1999 },
-    { title: "Sisters of Night and Fog4", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781250214416_p0_v5%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Ellen Alpsten", price: 1999 },
-    { title: "Sisters of Night and Fog5", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog6", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog7", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog8", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog9", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog0", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog11", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog12", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog13", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog14", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
-    { title: "Sisters of Night and Fog15", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 1999 },
+    { title: "1", imageUrl: "http://books.google.com/books/content?id=oui9DwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api", creator: "Lee Kravetz", price: 19.99 },
+    { title: "2", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781984882172_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Emma Stonex", price: 19.99 },
+    { title: "3", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9780593311295_p0_v1%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Kazuo Ishiguro", price: 19.99 },
+    { title: "Sisters of Night and Fog4", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781250214416_p0_v5%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Ellen Alpsten", price: 19.99 },
+    { title: "Sisters of Night and Fog5", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog6", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog7", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog8", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog9", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog0", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog11", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog12", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog13", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog14", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
+    { title: "Sisters of Night and Fog15", imageUrl: "https://prodimage.images-bn.com/lf?set=key%5Bresolve.pixelRatio%5D,value%5B1%5D&set=key%5Bresolve.width%5D,value%5B300%5D&set=key%5Bresolve.height%5D,value%5B10000%5D&set=key%5Bresolve.imageFit%5D,value%5Bcontainerwidth%5D&set=key%5Bresolve.allowImageUpscaling%5D,value%5B0%5D&product=path%5B/pimages/9781982134204_p0_v4%5D&call=url%5Bfile:common/decodeProduct.chain%5D", creator: "Erika Robuck", price: 19.99 },
   ];
 
   start = 0;
@@ -43,7 +43,7 @@ export class ProductListComponent implements OnInit {
           {
             name: "fiction",
             value: false,
-            subcategories:[
+            subcategories: [
               {
                 name: "adventure",
                 value: false
@@ -76,7 +76,7 @@ export class ProductListComponent implements OnInit {
                 name: "sci-fi",
                 value: false
               },
-              
+
             ]
           },
           {
@@ -120,7 +120,7 @@ export class ProductListComponent implements OnInit {
           {
             name: "Manga",
             value: false,
-            subcategories:[]
+            subcategories: []
           }
 
         ]
@@ -128,21 +128,21 @@ export class ProductListComponent implements OnInit {
       {
         name: "video",
         value: false,
-        subcategories:[
+        subcategories: [
           {
             name: "movies",
             value: false,
-            subcategories:[
+            subcategories: [
               {
                 name: "Popular",
                 value: false
-              },{
+              }, {
                 name: "Kids",
                 value: false
-              },{
+              }, {
                 name: "Family",
                 value: false
-              },{
+              }, {
                 name: "Hard",
                 value: false
               },
@@ -151,17 +151,17 @@ export class ProductListComponent implements OnInit {
           {
             name: "tv",
             value: false,
-            subcategories:[
+            subcategories: [
               {
                 name: "United States",
                 value: false
-              },{
+              }, {
                 name: "British",
                 value: false
-              },{
+              }, {
                 name: "Korean",
                 value: false
-              },{
+              }, {
                 name: "French",
                 value: false
               },
@@ -177,19 +177,19 @@ export class ProductListComponent implements OnInit {
           {
             name: "Pop",
             value: false,
-            subcategories:[]
-          },{
+            subcategories: []
+          }, {
             name: "Rock",
             value: false,
-            subcategories:[]
-          },{
+            subcategories: []
+          }, {
             name: "Blues",
             value: false,
-            subcategories:[]
-          },{
+            subcategories: []
+          }, {
             name: "Country",
             value: false,
-            subcategories:[]
+            subcategories: []
           },
 
         ]
@@ -237,6 +237,7 @@ export class ProductListComponent implements OnInit {
   country = "USA";
   ageRange = "Kids";
   popular = "";
+  addMsg = "";
 
 
   constructor() { }
@@ -258,49 +259,52 @@ export class ProductListComponent implements OnInit {
     if (this.finish > this.products.length) {
       this.finish = this.products.length;
     }
+    this.addMsg = "";
+
     window.scrollTo(0, 0);
   }
 
-  search(): void{
+  search(): void {
+    this.addMsg = "";
     let exampleUrl = "";
     let restUrl = "restapi.com?";
-    let prevKeys=false;
+    let prevKeys = false;
     exampleUrl += restUrl;
-    if(this.keyword!=""){
-      exampleUrl+="keyword=" + encodeURIComponent(this.keyword)
+    if (this.keyword != "") {
+      exampleUrl += "keyword=" + encodeURIComponent(this.keyword)
       prevKeys = true
     }
-    if(this.author!=""){
-      if(prevKeys){
+    if (this.author != "") {
+      if (prevKeys) {
         exampleUrl += "&"
       }
-      exampleUrl+="author=" + encodeURIComponent(this.author)
-      prevKeys = true
-
-    }
-    if(this.title!=""){
-      if(prevKeys){
-        exampleUrl += "&"
-      }
-      exampleUrl+="title=" + encodeURIComponent(this.title)
+      exampleUrl += "author=" + encodeURIComponent(this.author)
       prevKeys = true
 
     }
-    if(this.description!=""){
-      if(prevKeys){
+    if (this.title != "") {
+      if (prevKeys) {
         exampleUrl += "&"
       }
-      exampleUrl+="description=" + encodeURIComponent(this.description)
+      exampleUrl += "title=" + encodeURIComponent(this.title)
+      prevKeys = true
+
+    }
+    if (this.description != "") {
+      if (prevKeys) {
+        exampleUrl += "&"
+      }
+      exampleUrl += "description=" + encodeURIComponent(this.description)
       prevKeys = true
     }
 
     let filter_string = this.getFilterString();
 
-    if(filter_string!=""){
-      if(prevKeys){
+    if (filter_string != "") {
+      if (prevKeys) {
         exampleUrl += "&"
       }
-      exampleUrl+=filter_string;
+      exampleUrl += filter_string;
     }
 
 
@@ -309,22 +313,22 @@ export class ProductListComponent implements OnInit {
     console.log(exampleUrl)
   }
 
-  getFilterString(): String{
+  getFilterString(): String {
     let ret = "";
-    let prevKeys=false;
-    for(let category of this.filters.categories){
-      if(category.value){
-        if(prevKeys){
+    let prevKeys = false;
+    for (let category of this.filters.categories) {
+      if (category.value) {
+        if (prevKeys) {
           ret += "&"
         }
-        ret+=category.name+"=true";
-        prevKeys=true
-        for(let subcategory of category.subcategories){
-          if(subcategory.value){
-            ret+="&"+subcategory.name+"=true";
-            for(let subsubcategory of subcategory.subcategories){
-              if(subsubcategory.value){
-                ret+="&"+subsubcategory.name+"=true";
+        ret += category.name + "=true";
+        prevKeys = true
+        for (let subcategory of category.subcategories) {
+          if (subcategory.value) {
+            ret += "&" + subcategory.name + "=true";
+            for (let subsubcategory of subcategory.subcategories) {
+              if (subsubcategory.value) {
+                ret += "&" + subsubcategory.name + "=true";
               }
             }
           }
@@ -333,6 +337,34 @@ export class ProductListComponent implements OnInit {
 
     }
     return ret;
+  }
+
+  addToCart(product: any): void {
+    let cart = localStorage.getItem("cart");
+    product["quantity"] = 1;
+
+    if (cart != null) {
+
+      let add=true;
+
+      let temp: any[] = JSON.parse(cart);
+      for (let i = 0; i < temp.length; i++) {
+        if (temp[i].title == product.title) {
+          temp[i].quantity = temp[i].quantity + 1;
+          add=false;
+          break;
+        }
+      }
+      if(add){
+       temp.push(product);
+      }
+      localStorage.setItem("cart", JSON.stringify(temp))
+    }
+    else {
+      let temp = [product];
+      localStorage.setItem("cart", JSON.stringify(temp))
+    }
+    this.addMsg = product.title
   }
 
 }

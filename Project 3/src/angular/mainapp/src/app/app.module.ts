@@ -11,6 +11,9 @@ import { WelcomeComponent } from './components/welcome/welcome.component';
 import { IndexComponent } from './pages/index/index.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductListComponent } from './pages/product-list/product-list.component'
+import { CartComponent } from './pages/cart/cart.component';
+import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { OrderListComponent } from './components/order-list/order-list.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { ProductListComponent } from './pages/product-list/product-list.componen
     WelcomeComponent,
     ProductListComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    CartComponent,
+    CheckoutComponent,
+    OrderListComponent
   ],
   imports: [
     BrowserModule,
