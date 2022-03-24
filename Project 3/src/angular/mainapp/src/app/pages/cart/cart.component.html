@@ -53,9 +53,9 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let product of products; let indexOfElement = index">
-                            <td>{{product.title}}</td>
+                            <td style="max-width: 150px;">{{product.title}}</td>
                             <td><img src="{{product.imageUrl}}" style="max-height: 100px;" class="img-fluid img-thumbnail" alt="{{product.title}}"></td>
-                            <td><button type="button" class="btn btn-success mx-4" (click)="increment(indexOfElement, 1)">+</button>{{product.quantity}}<button type="button" class="btn btn-danger mx-4" (click)="increment(indexOfElement, -1)">-</button></td>
+                            <td><button type="button" class="btn-link mx border-0 bg-transparent p-0" (click)="increment(indexOfElement, 1)">+</button><span class="mx-1">{{product.quantity}}</span><button type="button" class="btn-link mx border-0 bg-transparent d-inline-block p-0" (click)="increment(indexOfElement, -1)">-</button></td>
                             <td>{{product.creator}}</td>
                             <td>{{product.price}}</td>
                             <td>{{product.price * product.quantity}}</td>

@@ -17,16 +17,12 @@ export class CartComponent implements OnInit {
 
     ngOnInit(): void {
         let cart = localStorage.getItem('cart');
-        console.log(cart);
         if(cart != null){
             this.products = JSON.parse(cart);
         }
-        console.log(this.products)
     }
 
     sum(): number {
-        console.log("Here")
-        console.log(this.products)
         if(this.products.length==0){
             return 0;
         }
