@@ -15,33 +15,60 @@ Orders should include all necessary information to process payment and deliver i
 Products should include, but are not limited to, books, physical media for music and physical media for video content.
 Employees should be able to login, view customers, view orders / status and order cancellations, fulfill orders and edit product information on pages. 
 
-Mandatory Requirements:
+
+
+**Mandatory Requirements:**
+
 A Customer can
+
 • Login. 
+
 • View the website home page.
+
 • Logout. 
+
 • View products 
+
 • Search for products 
-• Add products to cart, 
+
+• Add products to cart
+
 • View the contents of their carts 
+
 • Generate an order by checking out.
+
 • View their information. 
+
 • Update their information. 
+
 • View previous orders 
+
 • Search / filter through their previous orders 
+
 • View order statuses
+
 • Request order cancellations 
 
-Optional Requirements:
+**Optional Requirements:**
+
 An Employee can
+
 • Login.
+
 • View the manager home page
+
 • Logout.
+
 • View customers
+
 • View orders / status
+
 • View order cancellations
+
 • Fulfill orders
+
 • Manage stock
+
 • Edit product information on pages
 
 ## Development server
