@@ -6,7 +6,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Sahara
 
-In this document, all requirements and required technologies pertaining the second full stack individual project of your training will be presented. 
+In this document, all requirements and required technologies pertaining the second full stack project of your training will be presented. 
 All requirements are mandatory. 
 Sahara will manage the process of generating orders for products desired by customers. It will also serve as an employee portal for 
 Customers can login, view products, search for products, add products to cart, view the contents of their carts and generate an order by checking out.
