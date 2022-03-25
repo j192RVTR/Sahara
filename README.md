@@ -35,7 +35,7 @@ A Customer can
 Optional Requirements:
 An Employee can
 • Login.
-• View the manager home page?
+• View the manager home page
 • Logout.
 • View customers
 • View orders / status
