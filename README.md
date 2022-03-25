@@ -6,18 +6,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ### Sahara
 
-In this document, all requirements and required technologies pertaining the second full stack project of your training will be presented. 
-All requirements are mandatory. 
-Sahara will manage the process of generating orders for products desired by customers. It will also serve as an employee portal for 
-Customers can login, view products, search for products, add products to cart, view the contents of their carts and generate an order by checking out.
-Customers should also be able to view previous orders, search filter through their previous orders, view order status and request order cancellations.
-Orders should include all necessary information to process payment and deliver item.
-Products should include, but are not limited to, books, physical media for music and physical media for video content.
-Employees should be able to login, view customers, view orders / status and order cancellations, fulfill orders and edit product information on pages. 
+Sahara is an e-commerce website where registered users may select from a wide range of products to purchase. Customers will also be able to navigate the different categories of products on the app. In addition, customers will be able to view prices from ascending to descending prices and vice-versa. Customers will also be able to add and remove products from their shopping cart as desired. This will consist of coding via Angular and Spring MVC. With Angular, we plan to utilize bootstrap, CSS, and HTML. The Java Spring MVC will consist of using Hibernate, JDBC, and Spring CORE. Additionally, the project will feature a Rest API.
 
+## Technologies Used
 
+* Angular 10
+* Bootstrap 4.6
+* Java 11+
+* Spring Data
+* Spring Boot
+* HTML / CSS / Typescript
+* Lombok
 
-**Mandatory Requirements:**
+## Features
 
 A Customer can
 
@@ -48,8 +49,6 @@ A Customer can
 • View order statuses
 
 • Request order cancellations 
-
-**Optional Requirements:**
 
 An Employee can
 
