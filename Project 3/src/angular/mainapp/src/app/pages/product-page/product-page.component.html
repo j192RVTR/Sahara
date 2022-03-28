@@ -1,0 +1,43 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/product/genre/{{product.category.toLowerCase()}}">{{product.category | titlecase}}</a></li>
+        <li class="breadcrumb-item"><a href="/product/genre/{{product.category.toLowerCase()}}_{{product.subcategory.toLowerCase()}}">{{product.subcategory | titlecase}}</a></li>
+        <li class="breadcrumb-item" *ngIf="product.subsubcategory != ''"><a href="/product/genre/{{product.category.toLowerCase()}}_{{product.subcategory.toLowerCase()}}_{{product.subsubcategory.toLowerCase()}}">{{product.subsubcategory | titlecase}}</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{product.title}}</li>
+    </ol>
+  </nav>
+
+  <p class="text-success position-absolute" [class.d-none]="addMsg==''" >Added {{addMsg}} to cart.</p>
+
+
+<div class="container">
+    <div class="row mt-5 justify-content-center">
+        <div class="col-sm-6">
+            
+            <img src="{{product.imageUrl}}" alt="" class="img-fluid" width="100%">
+        </div>
+        <div class="col-sm-6 p-0">
+            <div class="card">
+                <div class="card-body">
+                  <h1 class="card-title">{{product.title}}</h1>
+                  <hr>
+                  <h2 class="card-subtitle mb-2 text-muted"><span style="font-size: 1.25rem;">By</span> {{product.creator}}</h2>
+                  <div class="row">
+                      <div class="col-sm-6">
+                        <h6 class="card-subtitle mb-2 ml-5"> Price: <span style="color: #B12704;">{{product.price}}</span></h6>
+                      </div>
+                      <div class="col-sm-6">
+                        <button (click)="addToCart(product)" class="btn btn-primary float-right">Add to Cart</button>
+                      </div>
+                  </div>
+                  
+                  
+                  <hr>
+                  <p class="card-text" [innerHtml]="product.description"></p>
+                </div>
+              </div>
+
+
+        </div>
+    </div>
+</div>

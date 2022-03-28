@@ -1,0 +1,86 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#">Home</a></li>
+        <li class="breadcrumb-item"><a href="#">Library</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Data</li>
+    </ol>
+</nav>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-8 mx-auto">
+            <div class="row">
+                <h1>Orders</h1>
+            </div>
+            <hr>
+            <div class="card mx-auto" *ngFor="let order of orders">
+                <div class="container-fluid">
+                    <div class="card-header row">
+                        <div class="col-sm-2">
+                            <div class="text-muted">
+                                Order Placed
+                            </div>
+                            <div class="text-muted">
+                                {{order.dateCreated | date }}
+
+                            </div>
+
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-muted">
+                                Total
+                            </div>
+                            <div class="text-muted">
+                                {{order.totalOrderPrice | currency}}
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                            <div class="text-muted">
+                                Ship To:
+                            </div>
+                            <div class="text-muted">
+                                {{name}}
+                            </div>
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <div class="text-muted">
+                                Number of Items
+                            </div>
+                            <div class="text-muted">
+                                {{order.orderProducts.length}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid my-5">
+                    <div class="row my-auto mb-5" *ngFor="let product of order.orderProducts">
+                        <div class="col-sm-3 my-auto">
+                            <a routerLink="detail/{{product.product.id}}">
+                                <img src="{{product.product.imageUrl}}" alt="{{product.product.title}}"
+                                    class="img-fluid my-auto">
+                            </a>
+                        </div>
+                        <div class="col-sm-9">
+                            <div>
+                                <a routerLink="detail/{{product.product.id}}">
+
+                                    {{product.product.title}}
+                                </a>
+                            </div>
+                            <div>
+                                {{product.product.creator}}
+                            </div>
+                            <div>
+                                {{product.quantity}}
+                            </div>
+                            <div>
+                                {{product.totalPrice}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

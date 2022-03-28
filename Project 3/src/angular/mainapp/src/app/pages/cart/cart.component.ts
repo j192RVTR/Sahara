@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class CartComponent implements OnInit {
 
     products = [
-        { creator: "Agatha Cristie", title: "The Lovely Bones", price: 19.99, imageUrl: "https://m.media-amazon.com/images/I/81MNGKljivL._SL1500_.jpg", quantity: 1 }
+        { product: {creator: "Agatha Cristie", title: "The Lovely Bones", price: 19.99, imageUrl: "https://m.media-amazon.com/images/I/81MNGKljivL._SL1500_.jpg"}, quantity: 1 }
     ]
 
     constructor(private router: Router) { }
@@ -20,29 +20,34 @@ export class CartComponent implements OnInit {
         if(cart != null){
             this.products = JSON.parse(cart);
         }
+        else{
+            this.products = [];
+        }
     }
 
     sum(): number {
         if(this.products.length==0){
             return 0;
         }
-        let ret = this.products.map(product => product.price * product.quantity).reduce((prev, curr) => prev + curr);
+        let ret = this.products.map(product => product.product.price * product.quantity).reduce((prev, curr) => prev + curr);
         console.log(ret)
         return ret;
+    }
+
+    num_items(){
+        if(this.products.length==0){
+            return 0;
+        }
+        return this.products.map(product => product.quantity).reduce((prev, curr) => prev+curr);
     }
 
     checkout(): void {
         this.router.navigate(['/checkout']);
     }
 
-    delete(product: any): void{
-        for(let i=0; i<this.products.length; i++){
-            if(this.products[i].title == product.title){
-                this.products.splice(i, 1);
-                localStorage.setItem('cart', JSON.stringify(this.products));
-                break;
-            }
-        }
+    delete(index: number): void{
+        this.products.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(this.products));
     }
 
     increment(index: number, value: number) : void{
