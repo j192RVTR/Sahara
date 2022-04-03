@@ -13,7 +13,7 @@
                       {{genre.name}}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#" *ngFor="let subgenre of genre.subgenre;">{{subgenre}}</a>
+                      <a class="dropdown-item" href="/product/genre/{{genre.value}}_{{subgenre.toLowerCase()}}" *ngFor="let subgenre of genre.subgenre;">{{subgenre}}</a>
                     </div>
                   </li>
               </ul>

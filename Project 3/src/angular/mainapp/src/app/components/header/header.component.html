@@ -1,5 +1,5 @@
  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #FBB03E;;">
-    <a class="navbar-brand p-0 m-0" href="#" id="logo_link">
+    <a class="navbar-brand p-0 m-0" routerLink="" id="logo_link">
         <img class="img-responsive" width="100px" height="" src="../../assets/images/sahara.png">
       </a>
       <a class="navbar-brand p-0" href="#">
@@ -13,9 +13,9 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <form class="d-flex ml-auto p-0" style="width: 100%;">
-            <input class="form-control mr-0" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-dark" type="submit"><i class="fa fa-search"></i></button>
+        <form class="d-flex ml-auto p-0" style="width: 100%;" (submit)="submit()">
+            <input class="form-control mr-0" type="search" id="keyword" name="keyword" placeholder="Search" aria-label="Search" required="true" [(ngModel)]="keyword">
+            <button class="btn btn-outline-dark" type="submit" (click)="submit()"><i class="fa fa-search"></i></button>
           </form>
       <ul class="navbar-nav ml-auto" style="max-height: 200px;">
         <li class="nav-item dropdown">
@@ -23,16 +23,17 @@
               My Account
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="#">Profile</a>
-              <a class="dropdown-item" href="#">Login</a>
-              <a class="dropdown-item" href="#">Logout</a>
+              <a class="dropdown-item" href="#" [class.d-none]="true">Profile</a>
+              <a class="dropdown-item" href="login" [class.d-none]="isLoggedIn">Login</a>
+              <a class="dropdown-item" routerLink="register" [class.d-none]="isLoggedIn">Register</a>
+              <a class="dropdown-item" href="#" (click)="logout()" [class.d-none]="!isLoggedIn">Logout</a>
             </div>
           </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Cart</a>
+          <a class="nav-link" routerLink="cart">Cart</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
+          <a class="nav-link" routerLink="orders">Orders</a>
         </li>
       </ul>
     </div>
