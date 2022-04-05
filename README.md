@@ -46,7 +46,9 @@ A Customer can
 
 ### Features Still to Add
 
-• Search / filter through their previous orders 
+A Customer can
+
+• Search / filter through previous orders 
 
 • View order statuses
 
