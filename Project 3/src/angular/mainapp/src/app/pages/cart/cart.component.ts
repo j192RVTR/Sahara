@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { OrderItem } from 'src/app/classes/order-item';
 
 
 @Component({
@@ -9,9 +10,7 @@ import { Router } from '@angular/router';
 })
 export class CartComponent implements OnInit {
 
-    products = [
-        { product: {creator: "Agatha Cristie", title: "The Lovely Bones", price: 19.99, imageUrl: "https://m.media-amazon.com/images/I/81MNGKljivL._SL1500_.jpg"}, quantity: 1 }
-    ]
+    products: OrderItem[] = []
 
     constructor(private router: Router) { }
 

@@ -49,6 +49,10 @@ export class UserServiceService {
     localStorage.clear()
   }
 
+  isLoggedIn(): boolean{
+    return localStorage.getItem("user") != null;
+  }
+
   isLoggedInObservable(): Observable<boolean> {
     return this._isLoggedInObservable;
 }

@@ -1,8 +1,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Library</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Data</li>
+        <li class="breadcrumb-item active" aria-current="page">Orders</li>
     </ol>
 </nav>
 <div class="container-fluid">
@@ -13,7 +12,7 @@
                 <h1>Orders</h1>
             </div>
             <hr>
-            <div class="card mx-auto" *ngFor="let order of orders">
+            <div class="card mx-auto mt-3" *ngFor="let order of orders">
                 <div class="container-fluid">
                     <div class="card-header row">
                         <div class="col-sm-2">
@@ -52,8 +51,34 @@
                         </div>
                     </div>
                 </div>
-                <div class="container-fluid my-5">
-                    <div class="row my-auto mb-5" *ngFor="let product of order.orderProducts">
+                <!-- <div class="container-fluid my-5"> -->
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" colspan="2">Product</th>
+                            <th scope="col">Creator</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Unit Price</th>
+                            <th scope="col">Total Price</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let product of order.orderProducts">
+                            <th scope="row"><a routerLink="/detail/{{product.product.id}}">
+                                <img src="{{product.product.imageUrl}}" alt="{{product.product.title}}"
+                                    class="img-fluid my-auto" style="max-height: 100px;">
+                            </a></th>
+                            <th scope="row"><a routerLink="/detail/{{product.product.id}}">
+                                {{product.product.title}}
+                            </a></th>
+                            <td>{{product.product.creator}}</td>
+                            <td>{{product.quantity}}</td>
+                            <td>{{product.product.price | currency}}</td>
+                            <td>{{product.totalPrice | currency}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    <!-- <div class="row my-auto mb-5" *ngFor="let product of order.orderProducts">
                         <div class="col-sm-3 my-auto">
                             <a routerLink="detail/{{product.product.id}}">
                                 <img src="{{product.product.imageUrl}}" alt="{{product.product.title}}"
@@ -78,8 +103,8 @@
                             </div>
 
                         </div>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </div>

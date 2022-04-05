@@ -18,6 +18,7 @@ import { OrderListComponent } from './components/order-list/order-list.component
 import { ProductPageComponent } from './pages/product-page/product-page.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { OrdersComponent } from './pages/orders/orders.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { OrdersComponent } from './pages/orders/orders.component';
     OrderListComponent,
     ProductPageComponent,
     RegisterComponent,
-    OrdersComponent
+    OrdersComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
